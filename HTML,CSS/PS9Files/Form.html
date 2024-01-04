@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <h1><b><u>Student Form</u></b></h1>
+    <style>
+        body{
+            margin-left: 80px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form><big>
+            <table>
+                <tr>
+                    <td><label for="">Name :</label> </td>
+                    <td><input type="text" name="name" id="name" minlength="4" maxlength="10" autofocus required
+                            placeholder="Enter name"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email : </label></td>
+                    <td><input type="email" name="email" id="email" required placeholder="Enter email"></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age :</label></td>
+                    <td><input type="number" name="age" id="age" required placeholder="Enter age"></td>
+                </tr>
+                <tr>
+                    <td><label for="Address">Address :</label></td>
+                    <td> <textarea name="Address" id="Address" cols="30" rows="10"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="Date Of Birth">Date Of Birth :</label></td>
+                    <td><input type="date" required min="2001-01-01"></td>
+                </tr>
+                <tr>
+                    <td><label for="Gender">Gender : </label></td>
+                    <td><input type="radio" name="gender" id="gender" value="male"><label for="gender">Male</label>
+                        <input type="radio" name="gender" id="gender" value="female"><label for="female">Female</label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="degree">Degree : </label></td>
+                    <td><input type="radio" name="degree" id="degree" value="degree"> <label for="degree">MBA</label>
+                        <input type="radio" name="degree" id="degree" value="degree"> <label for="degree">BTECH</label>
+                        <input type="radio" name="degree" id="degree" value="degree"><label for="degree">MTECH</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="hobbies">Hobbies : </label></td>
+                    <td>
+                        <input type="checkbox" name="hobbies" id="Music" value="Music"><label for="Music">Music</label>
+                        <input type="checkbox" name="hobbies" id="Dance" value="Dance"><label
+                            for="Dance">Dance</label><br>
+                        <input type="checkbox" name="hobbies" id="Swimming" value="Swimming"><label
+                            for="Swimming">Swimming</label>
+                        <input type="checkbox" name="hobbies" id="Reading" value="Reading"><label
+                            for="Reading">Reading</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="City">City : </label></td>
+
+                    <td>
+                        <select name="city" id="city">
+
+                            <option value="test"> --------Select City---------</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Raipur">Raipur</option>
+                            <option value="Mathura">Mathura</option><br>
+
+                        </select>
+                    </td>
+                </tr><br>
+                <tr>
+                    <td><br><input type="button" value="Register" id="register" name="Register">
+                    <input type="button" value="City" id="cancel" name="Cancel"></td>
+                </tr>
+            </table>
+        </big>
+    </form><br>
+    Already SignIn?
+    <a href="http://127.0.0.1:5500/SignIn.html"><br>SignUp</a>
+</body>
+
+</html>

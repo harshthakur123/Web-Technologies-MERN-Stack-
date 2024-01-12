@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        display=()=>{
+
+            allWebsites=[ "www.google.com",
+                "www.msn.com",
+                "www.amazon.co.in",
+                "in.answers.yahoo.com",
+                "en.m.wikipedia.com",
+                "codehs.gitbooks.io",
+                "www.coderanch.com",
+                "www.linkedIn.com"]
+
+            var wwwWebsites=allWebsites.filter(function(sites){
+                return sites.startsWith("www")
+            })
+            document.getElementById("disp").innerHTML="Total no. of websites begins with www : "+wwwWebsites.length+"<br><br>The sites are : "+ wwwWebsites;
+        }
+
+    </script>
+    <style>
+        p {
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body onload="display()">
+    <p>
+        16. Say, have an array that holds many web site names. Eg, www.google.com, www.msn.com,
+        www.amazon.co.in, in.answers.yahoo.com, en.m.wikipedia.com, codehs.gitbooks.io,
+        www.coderanch.com etc. Search for all sites that begin with “www” and display the total number of such
+        sites. Eg for above eg, total is 4
+
+    </p>
+    <p id="disp"></p>
+</body>
+
+</html>

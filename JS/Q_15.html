@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        p{
+            font-size: x-large;
+        }
+    </style>
+    <script>
+        display=()=>{
+        var solarSys = ["Mercury","Venus","Earth","Mars","Jupiter","Saturn"];
+       var reversedArray=solarSys.map(function(planet){
+            return planet.split('').reverse().join('');
+       })
+        document.getElementById("disp").innerHTML="Original Array : "+solarSys
+        document.getElementById("dispRev").innerHTML="Reversed Array : "+reversedArray;
+    }
+    </script>
+</head>
+<body onload="display()">
+    <p>15. An array contains a set of 5 words. Write Javascript to reverse each word and arrange the resulting words
+        in alphabetical order. Make use of array functions</p>
+        <p id="disp"></p>
+        <p id="dispRev"></p>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of digit </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        div {
+            border: 2px solid black;
+            padding: 30px;
+        }
+
+        body {
+            font-size: x-large;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 30px;
+        }
+
+        input {
+            font-size: large;
+        }
+
+        button {
+            margin-top: 10px;
+            font-style: normal;
+        }
+
+        span {
+            margin-left: 10px;
+            color: red;
+        }
+
+        p {
+            margin-top: 5px;
+        }
+    </style>
+    <script>
+        function arrayToString() {
+
+            var members = ["Harsh", "Mayank", "Suyog", "Asha", "Gogoi"]
+
+            var name = members.map(i => i.toUpperCase()).join(', ');
+
+            document.getElementById("show").innerHTML = `Array = ["Harsh","Mayank","Suyog","Asha","Gogoi"] <br>String = ${name}`;
+
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <div style="width: 700px; height: 400px; background: linear-gradient(to right,orange ,white,green);">
+
+        <h1 align="center"><u>Members Of My Group are</u></h1>
+        <p>Click the button to display member names in uppercase, delimited by comma:</p>
+        <button type="button" id="btnShow" onclick="arrayToString()" class="custom-button">Show String</button>
+
+
+
+        <p id="show"></p>
+
+
+
+    </div>
+
+</body>
+
+</html>

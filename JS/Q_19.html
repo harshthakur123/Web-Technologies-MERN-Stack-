@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of digit </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        div{
+            border: 2px solid black;
+            padding: 30px;
+        }
+        body{
+            font-size: x-large;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 30px;
+        }
+        input{
+            font-size: large;
+        }
+        button{
+            margin-top: 10px;
+            font-style: normal;
+        }
+        span{
+            margin-left: 10px;
+            color: red;
+        }
+        p{
+            margin-top: 5px;
+        }
+
+    </style>
+    <script>
+        add=()=>{
+            var num=document.getElementById("num").value;
+            if(num>1000 || num<0){
+                document.getElementById("error").innerHTML="Enter the number valid in range!!!"
+                document.getElementById("show").innerHTML=""
+                return;
+            }
+            var temp=num;
+            let sum=0;
+            while(temp!=0){
+                n=temp%10;
+                console.log(n)
+                sum+=n;
+                temp=Math.floor(temp/10);
+            }
+            document.getElementById("error").innerHTML=""
+            document.getElementById("show").innerHTML=`Sum of digits of ${num} is ${sum}`
+            document.getElementById("num").focus();
+
+        }
+        reset=()=>{
+            document.getElementById("num").reset();
+            document.getElementById("show").innerHTML=""
+        }
+    </script>
+</head>
+<body>
+    <p>19. Write a program that accepts (from the html form) a positive integer less than 1000 and prints out the
+        sum of the digits of this number.
+        Enter a +ve no less than 1000: -4
+        Entered number is out of range
+        Enter a +ve no less than 1000: 1234
+        Entered number is out of range
+        Enter a +ve no less than 1000: 546
+        Sum of the digits of 546 is 15</p>
+    <div style="width: 700px; height: 300px; background: linear-gradient(to right,#4AC29A ,#BDFFF3);">
+    <h1 align="center"><u>Sum Of Digits</u></h1>
+    <form id="myform">
+    <label for="sum">Enter a positive number less than 1000 : </label><br>
+    <input type="number" id="num"><span id="error"></span><br>
+    <button type="button" class="btn btn-primary" onclick="add()">Sum Of Digit</button>
+    <button type="button" class="btn btn-primary" onclick="reset()">Reset</button>
+    
+    <p id="show"></p>
+    </form>
+    </div>
+    
+</body>
+</html>
